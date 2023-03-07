@@ -2,26 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
 
-## Development server
+# create new todo save in localstorage and also in state, it's posible to updadate,change status  and delete  todo ;
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# i used folowing features to create this project:
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ 1) angular modules;
+ 2) angular components
+ 3) interfaces and types 
+ 4) angular Services
+ 5) angular Routing( loadChilder, activateRout, router parametrs)
+ 6) reactiveForm ( formGroup,Validators, formGroup.patchValue(),formGroup.getValue(), formControl,formControlName)
+ 7) RXJS Observable  (of(),from() subscribe, unsubscribe)
+ 8) RXJS subject (BehaviorSubject, pipe, next)
+ 9) arrat prototypes( map,foreach,filter,find,findIndex ,...)
+ 10) ngClass,*ngFor,*ngIf
+ 11) bootstrap
+ 

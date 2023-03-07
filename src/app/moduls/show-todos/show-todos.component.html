@@ -1,0 +1,31 @@
+<p class="text-end"><button class="btn btn-primary mt-5 mb-4 p-1"  routerLink="/todo">add todo</button></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col" >id</th>
+            <th scope="col" >title</th>
+            <th scope="col" >description</th>
+            <th scope="col" >responsibelPerson</th>
+            <th scope="col" >create date</th>
+            <th scope="col" >dead line</th>
+            <th scope="col" >status</th> 
+            <th scope="col" >edit </th>           
+            <th scope="col" >status change</th>           
+            <th scope="col" > delete</th>           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let todo of todos" scope="row" [ngClass]="{'completed':todo.status==='completed'}">
+            <td>{{todo.id}}</td>
+            <td>{{todo.title}}</td>
+            <td>{{todo.description}}</td>
+            <td>{{todo.responsiblePerson?.fullName}}</td>
+            <td>{{todo.createDate|date:'dd.MM.yyyy' }}</td>
+            <td>{{todo.deadLine|date:'dd.MM.yyyy' }}</td>
+            <td>{{todo.status}}</td>   
+            <td><button class="btn btn-warning" routerLink="/todo/edit/{{todo.id}}">edit</button></td>   
+            <td><button class="btn btn-primary" (click)="statusChange(todo.id)">status change</button></td>   
+            <td><button class="btn btn-danger" (click)="delete(todo.id)">delete</button></td>                     
+        </tr>
+    </tbody>
+</table>

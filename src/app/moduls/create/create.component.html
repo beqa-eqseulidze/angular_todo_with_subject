@@ -1,0 +1,25 @@
+<form  class="mt-5" [formGroup]="form"  (ngSubmit)="submit()">        
+    <div class="mb-3">
+        <label for="title" class="form-label">title</label>
+        <input type="text" id="title" class="form-control" placeholder="title" formControlName="title">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">description</label>
+        <textarea  id="description" class="form-control" placeholder="description" formControlName="description">
+        </textarea>    
+      </div>
+      <div class="mb-3">
+        <label for="deadLine" class="form-label">description</label>
+        <input type="date" id="deadLine" class="form-control"  formControlName="deadLine">
+      </div>
+      <div class="mb-3">
+        <label for="responsiblePersonId" class="form-label">responsiblePersonId</label>
+        <select id="responsiblePersonId" class="form-select" formControlName="responsiblePersonId">
+          <option *ngFor="let person of persons" value="{{person.id}}">{{person.fullName}}{{person.id}}</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">{{todoId?'edit':'submit'}}</button>
+    
+  </form>
+  
